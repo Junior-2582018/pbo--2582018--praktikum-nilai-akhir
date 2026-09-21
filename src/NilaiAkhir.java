@@ -36,6 +36,23 @@ public class NilaiAkhir {
 
         akhir += finalNilai * BOBOT_FINAL;
 
+        // (int) memotong bagian desimal, bukan melakukan pembulatan matematika.
+        int dibulatkan = (int) akhir;
+        double selisih = akhir - dibulatkan;
+        boolean lulus = akhir >= 60;
+
+        System.out.println();
+        System.out.println("===== NILAI AKHIR =====");
+        System.out.println("Praktikum : " + praktikum + "  (30%)");
+        System.out.println("Tugas     : " + tugas + "  (20%)");
+        System.out.println("MID       : " + mid + "  (20%)");
+        System.out.println("Final     : " + finalNilai + "  (30%)");
+
+        System.out.println();
+        System.out.println("Nilai akhir  : " + akhir);
+        System.out.println("Dibulatkan   : " + dibulatkan);
+        System.out.println("Selisih      : " + selisih);
+        System.out.println("Lulus (>=60) : " + lulus);
         input.close();
     }
 }
