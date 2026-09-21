@@ -22,6 +22,19 @@ public class NilaiAkhir {
 
         System.out.print("Nilai final     : ");
         double finalNilai = input.nextDouble();
+        /*
+         * Jika semua variabel bertipe int dan menggunakan rumus:
+         * praktikum * 30 / 100 + tugas * 20 / 100
+         * dan seterusnya, hasilnya menjadi 78, bukan 79,1.
+         * Hal ini terjadi karena pembagian int membuang bagian desimal.
+         */
+
+// Kurung tidak diperlukan karena * dikerjakan lebih dulu daripada +.
+        double akhir = praktikum * BOBOT_PRAKTIKUM
+                + tugas * BOBOT_TUGAS
+                + mid * BOBOT_MID;
+
+        akhir += finalNilai * BOBOT_FINAL;
 
         input.close();
     }
